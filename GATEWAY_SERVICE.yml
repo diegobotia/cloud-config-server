@@ -1,0 +1,6 @@
+# GATEWAY-SERVICE.yml
+server:
+  port: 8989
+spring:
+  application:
+    name: GATEWAY-SERVICE
