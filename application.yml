@@ -1,0 +1,23 @@
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 15
+    prefer-ip-address: true
+    #instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+
+microservice:
+  payment-service:
+    endpoints:
+       endpoint:
+         uri: http://PAYMENT-SERVICE/payment/doPayment
+  order-service:
+    endpoints:
+       endpoint:
+         uri: http://ORDER-SERVICE/order/bookOrder
+         
